@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @gadget.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @gadget.model %>
+</p>
+
+<p>
+  <strong>Model no:</strong>
+  <%= @gadget.model_no %>
+</p>
+
+<p>
+  <strong>Gunny:</strong>
+  <%= @gadget.gunny_id %>
+</p>
+
+<p>
+  <strong>Mx:</strong>
+  <%= @gadget.mx_id %>
+</p>
+
+<p>
+  <strong>Device name:</strong>
+  <%= @gadget.device_name %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @gadget.os %>
+</p>
+
+<p>
+  <strong>Os version:</strong>
+  <%= @gadget.os_version %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @gadget.comments %>
+</p>
+
+<p>
+  <strong>Current user:</strong>
+  <%= @gadget.current_user %>
+</p>
+
+<p>
+  <strong>Last user:</strong>
+  <%= @gadget.last_user %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @gadget.format %>
+</p>
+
+<p>
+  <strong>Home location:</strong>
+  <%= @gadget.home_location %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @gadget.available %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @gadget.user %>
+</p>
+
+<%= link_to 'Edit', edit_gadget_path(@gadget) %> |
+<%= link_to 'Back', gadgets_path %>

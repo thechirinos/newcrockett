@@ -1,0 +1,53 @@
+<h1>Listing gadgets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Model no</th>
+      <th>Gunny</th>
+      <th>Mx</th>
+      <th>Device name</th>
+      <th>Os</th>
+      <th>Os version</th>
+      <th>Comments</th>
+      <th>Current user</th>
+      <th>Last user</th>
+      <th>Format</th>
+      <th>Home location</th>
+      <th>Available</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gadgets.each do |gadget| %>
+      <tr>
+        <td><%= gadget.brand %></td>
+        <td><%= gadget.model %></td>
+        <td><%= gadget.model_no %></td>
+        <td><%= gadget.gunny_id %></td>
+        <td><%= gadget.mx_id %></td>
+        <td><%= gadget.device_name %></td>
+        <td><%= gadget.os %></td>
+        <td><%= gadget.os_version %></td>
+        <td><%= gadget.comments %></td>
+        <td><%= gadget.current_user %></td>
+        <td><%= gadget.last_user %></td>
+        <td><%= gadget.format %></td>
+        <td><%= gadget.home_location %></td>
+        <td><%= gadget.available %></td>
+        <td><%= gadget.user %></td>
+        <td><%= link_to 'Show', gadget %></td>
+        <td><%= link_to 'Edit', edit_gadget_path(gadget) %></td>
+        <td><%= link_to 'Destroy', gadget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gadget', new_gadget_path %>
