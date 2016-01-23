@@ -1,79 +1,50 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Gadget -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Gadget %></h1>
+</div>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @gadget.brand %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:brand) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.brand %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:model) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.model %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:model_no) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.model_no %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:gunny_id) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.gunny_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:mx_id) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.mx_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:device_name) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.device_name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:os) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.os %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:os_version) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.os_version %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:comments) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.comments %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:current_user) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.current_user %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:last_user) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.last_user %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:format) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.format %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:home_location) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.home_location %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:available) %></dt>
+      <dd><pre class="prettyprint"><%= @gadget.available %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Model:</strong>
-  <%= @gadget.model %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              gadgets_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_gadget_path(@gadget), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              gadget_path(@gadget),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Model no:</strong>
-  <%= @gadget.model_no %>
-</p>
-
-<p>
-  <strong>Gunny:</strong>
-  <%= @gadget.gunny_id %>
-</p>
-
-<p>
-  <strong>Mx:</strong>
-  <%= @gadget.mx_id %>
-</p>
-
-<p>
-  <strong>Device name:</strong>
-  <%= @gadget.device_name %>
-</p>
-
-<p>
-  <strong>Os:</strong>
-  <%= @gadget.os %>
-</p>
-
-<p>
-  <strong>Os version:</strong>
-  <%= @gadget.os_version %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @gadget.comments %>
-</p>
-
-<p>
-  <strong>Current user:</strong>
-  <%= @gadget.current_user %>
-</p>
-
-<p>
-  <strong>Last user:</strong>
-  <%= @gadget.last_user %>
-</p>
-
-<p>
-  <strong>Format:</strong>
-  <%= @gadget.format %>
-</p>
-
-<p>
-  <strong>Home location:</strong>
-  <%= @gadget.home_location %>
-</p>
-
-<p>
-  <strong>Available:</strong>
-  <%= @gadget.available %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @gadget.user %>
-</p>
-
-<%= link_to 'Edit', edit_gadget_path(@gadget) %> |
-<%= link_to 'Back', gadgets_path %>

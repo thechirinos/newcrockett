@@ -1,25 +1,94 @@
-<%= simple_form_for(@gadget) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :brand %>
-    <%= f.input :model %>
-    <%= f.input :model_no %>
-    <%= f.input :gunny_id %>
-    <%= f.input :mx_id %>
-    <%= f.input :device_name %>
-    <%= f.input :os %>
-    <%= f.input :os_version %>
-    <%= f.input :comments %>
-    <%= f.input :current_user %>
-    <%= f.input :last_user %>
-    <%= f.input :format %>
-    <%= f.input :home_location %>
-    <%= f.input :available %>
-    <%= f.association :user %>
+<%= form_for @gadget, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :brand, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :brand, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :model, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :model, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :model_no, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :model_no, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gunny_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :gunny_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mx_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mx_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :device_name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :device_name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :os, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :os, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :os_version, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :os_version, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :comments, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :comments, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :current_user, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :current_user, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :last_user, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :last_user, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :format, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :format, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :home_location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :home_location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :available, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :available, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  gadgets_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>

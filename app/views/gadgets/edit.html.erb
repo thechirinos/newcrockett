@@ -1,6 +1,5 @@
-<h1>Editing gadget</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @gadget %> |
-<%= link_to 'Back', gadgets_path %>
+<%- model_class = Gadget -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => Gadget %></h1>
+</div>
+<%= render :partial => 'form' %>
