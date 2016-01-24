@@ -1,94 +1,86 @@
 <%= form_for @gadget, :html => { :class => 'form-horizontal form-model' } do |f| %>
-  <div class="form-group">
-    <%= f.label :brand, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :brand, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :model, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :model, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :model_no, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :model_no, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :gunny_id, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :gunny_id, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :mx_id, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :mx_id, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :device_name, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :device_name, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :os, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :os, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :os_version, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :os_version, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :comments, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_area :comments, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :current_user, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :current_user, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :last_user, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :last_user, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :format, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :format, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :home_location, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.text_field :home_location, :class => 'text-field form-control' %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :available, :class => 'control-label col-md-2' %>
-    <div class="col-md-10">
-      <%= f.check_box :available, :class => 'text-field form-control' %>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <div class='col-md-offset-2 col-md-10'>
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                  gadgets_path, :class => 'btn btn-default' %>
+
+<form class="form-horizontal">
+  <div class="form-group-lg">
+    <%= f.label :gunny_id, "Gunny ID", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :gunny_id, :class => 'form-control' %>
     </div>
   </div>
+  <div class="form-group-lg">
+    <%= f.label :mx_id, "MX ID", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :mx_id, :class => 'form-control' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :device_name, "Device Name", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :device_name, :class => 'form-control', :placeholder => 'QA iPad 4' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :brand, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :brand, :class => 'form-control', :placeholder => 'Apple, Samsung, HTC' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :model, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :model, :class => 'text-field form-control', :placeholder => 'iPhone 5, iPad, Galaxy S5' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :model_no, "Model #", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :model_no, :class => 'text-field form-control', :placeholder => 'LG-D820' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :os, "OS", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :os, :class => 'text-field form-control', :placeholder => 'iOS, Android, Windows Phone' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :os_version, "OS Version", :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :os_version, :class => 'text-field form-control', :placeholder => '9.2, 5.1.1' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :format, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :format, :class => 'text-field form-control', :placeholder => 'Portrait, Landscape' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :home_location, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_field :home_location, :class => 'text-field form-control', :placeholder => 'Product, Platoon, QA' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :comments, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.text_area :comments, :class => 'form-control', :placeholder => 'Comments' %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+    <%= f.label :available, :class => 'col-sm-3 control-label roboto' %>
+    <div class="col-sm-9 form-spacing">
+    <%= f.check_box :available, as: :boolean %>
+    </div>
+  </div>
+  <div class="form-group-lg">
+  <label class="col-sm-3 control-label roboto"></label>
+  <div class="col-sm-9 form-spacing">
+    <%= f.submit "Done", :class => 'btn btn-primary btn-lg' %>
+    <%= link_to "Cancel", gadgets_path, :class => 'btn btn-default btn-lg' %>
+  </div>
+  </div>
+</form>
 <% end %>
+

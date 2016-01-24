@@ -28,7 +28,7 @@ class GadgetsController < ApplicationController
 
     respond_to do |format|
       if @gadget.save
-        format.html { redirect_to @gadget, notice: 'Gadget was successfully created.' }
+        format.html { redirect_to @gadget, notice: 'Device was successfully created.' }
         format.json { render :show, status: :created, location: @gadget }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class GadgetsController < ApplicationController
   def update
     respond_to do |format|
       if @gadget.update(gadget_params)
-        format.html { redirect_to @gadget, notice: 'Gadget was successfully updated.' }
+        format.html { redirect_to @gadget, notice: 'Device was successfully updated.' }
         format.json { render :show, status: :ok, location: @gadget }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class GadgetsController < ApplicationController
   def destroy
     @gadget.destroy
     respond_to do |format|
-      format.html { redirect_to gadgets_url, notice: 'Gadget was successfully destroyed.' }
+      format.html { redirect_to gadgets_url, notice: 'Device was successfully deleted.' }
       format.json { head :no_content }
     end
   end

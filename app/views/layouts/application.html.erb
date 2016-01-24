@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Newcrockett</title>
+  <title>Crockett</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-<meta name="viewport" content="width=device-width, initial-scale=1"/></head>
-<body>
-<%= render partial: "elements/navbar" %>
-<%= bootstrap_flash %>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" sizes="32x32" href="<%= asset_path('favicon-32x32.png') %>">
+<link rel="icon" type="image/png" sizes="96x96" href="<%= asset_path('favicon-96x96.png') %>">   
+<link rel="icon" type="image/png" sizes="16x16" href="<%= asset_path('favicon-16x16.png') %>">
 
+</head>
+<body class="newbackground">
+<%= render partial: "elements/navbar" %>
+<div class="container">
+<%= bootstrap_flash %>
+</div>
 
 <%= yield %>
 
